@@ -12,7 +12,7 @@ I installed the Lean toolchain, confirmed that all three libraries build from th
 - `lake exe get_cache` fetched the Mathlib and Physlib caches, including PhyslibAlpha's.
 - `lake build` (Physlib + QuantumInfo) succeeded: 10503 jobs, no errors.
 - `lake build PhyslibAlpha` succeeded: 10758 jobs, no errors.
-- `eb1fa9fd`: set up beads issue tracking with br and bv (prefix `physlib`), plus a CLAUDE.md that documents bv. `br doctor` reports everything OK.
+- `eb1fa9fd`: set up beads issue tracking with br and bv (prefix `physlib`), plus a CLAUDE.md that documents bv. `br doctor` reports the workspace healthy and its integrity checks OK, with four warnings. `.beads/.gitignore` now names `.write.lock`, though `*.lock` already covered it. The rest are a stale `.write.lock` with no live `br` process, a WAL file with no SHM sidecar (expected for frankensqlite), and a missing `beads.base.jsonl` merge anchor, which stays uncommitted.
 - physlib-v9v (the beads setup) is closed.
 
 ## Key Changes

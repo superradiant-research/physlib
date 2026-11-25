@@ -4,8 +4,9 @@
 *.db-shm
 *.db-wal
 
-# Lock files
+# Lock files (.write.lock is already covered by *.lock; br doctor checks for it by name)
 *.lock
+.write.lock
 
 # Temporary
 last-touched
